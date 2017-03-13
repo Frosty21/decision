@@ -33,14 +33,11 @@ $(document).ready(function(){
       $(".container footer").append(`<p style="color:red;">Poll is now open!</p>`);
     }
   })
-  console.log(index)
   for(let i = 1; i <= index; i++){
     test = Number($(`tbody tr:nth-child(${i}) .points`).text());
     if (test !== 0 && highlight === 0){
       highlight = 1;
     }
-      console.log(winnerValue)
-      console.log(test)
 
     if (winnerValue <= test){
       winnerValue = test;
@@ -50,10 +47,7 @@ $(document).ready(function(){
   if (highlight === 1){
     for(let i = 1; i <= index; i++){
       test = Number($(`tbody tr:nth-child(${i}) .points`).text());
-      console.log(test);
-      console.log(winnerValue);
       if( test === winnerValue){
-        console.log
          $(`tbody tr:nth-child(${i})`).css("background-color", "#33FF80");
       }
     }
